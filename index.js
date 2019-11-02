@@ -94,3 +94,28 @@ else {
 }
 
 // -----------------------------------------------------------------------------------------------
+
+// Check if word is a palindrome (same if you reverse the order of the letters)
+let phraseToCheck = 'race car';
+let stringWithoutSpaces = '';
+
+// 1. join the words in the string by removing the space
+for (let i = 0; i < phraseToCheck.length; i++) {
+  if (phraseToCheck[i] !== ' ')
+  stringWithoutSpaces += phraseToCheck[i]
+}
+
+console.log (stringWithoutSpaces)
+
+// 2. reverse the resulting string
+let reversedString = '';
+for (let i = stringWithoutSpaces.length -1; i >= 0; i--) {
+  reversedString += stringWithoutSpaces[i];
+}
+
+console.log (reversedString)
+
+// 3. compare the original string with the reversed string
+if (stringWithoutSpaces === reversedString)
+  console.log (`${phraseToCheck} is a palindrome`);
+else console.log (`${phraseToCheck} is not palindrome`);
